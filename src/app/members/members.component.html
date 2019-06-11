@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col-md-6" style="background-color: lightcyan">
+    <div class="row" style="border-right: 1px solid;overflow: scroll;max-height: 400px;">
+      <table class="table" style="align-content: right;">
+        <thead style="background-color: whitesmoke;">
+          <tr>
+            <th scope="col">S.No</th>
+            <th scope="col">Name</th>
+            <th scope="col">SapId</th>
+            <th scope="col">Profile</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let member of members;let i=index">
+            <td>{{i+1}}</td>
+            <td>{{member.name}}</td>
+            <td>{{member.sapId}}</td>
+            <td><a style="cursor:pointer;" (click)="onSelect(member)"><img src="{{ member.userImage }}"
+                  alt="{{ member.name }}" class="img-thumbnail" style="width: 75px;" /></a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="row">
+      <button class="btn btn-success">Add</button> &nbsp;
+      <button class="btn btn-danger">Delete</button> &nbsp;
+    </div>
+  </div>
+  <div class="col-md-6" style="background-color: lightcyan;">
+    <app-member-detail [currentUser]="selectedUser"></app-member-detail>
+
+  </div>
+</div>

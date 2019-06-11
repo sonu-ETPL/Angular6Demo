@@ -1,0 +1,22 @@
+<div *ngIf="currentUser">
+<img src="{{ currentUser.userImage }}" alt="{{ currentUser.name }}" class="rounded-circle" style="width: 250px;" />
+<!--<h2>{{currentEvent.name | uppercase}} </h2>
+  <hr>
+  <p>{{currentEvent.details}}</p>-->
+<table class="table">
+  <tbody>
+    <tr>
+      <td><strong>Name</strong></td>
+      <td>{{currentUser.name | uppercase}} ({{currentUser.sapId}})</td>
+    </tr>
+    <!--<tr>
+      <td><strong>DOB</strong></td>
+      <td>{{currentUser.dob}}</td>
+    </tr>-->
+    <tr>
+      <td><strong>About</strong></td>
+      <td>{{currentUser.about}}</td>
+    </tr>
+  </tbody>
+</table>
+</div>

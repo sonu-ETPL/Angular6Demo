@@ -1,0 +1,77 @@
+<div class="row">
+    <div class="col-md-6" style="background-color: lightcyan">
+      <div class="row" style="border-right: 1px solid;overflow: scroll;max-height: 400px;">
+        <table class="table" style="align-content: right;">
+          <thead style="background-color: whitesmoke;">
+            <tr>
+              <th scope="col">S.No</th>
+              <th scope="col">Name</th>
+              <th scope="col">Type</th>
+              <th scope="col">Snapshot</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let event of events;let i=index">
+              <td>{{i+1}}</td>
+              <td>{{event.name}}</td>
+              <td>{{event.type}}</td>
+              <td><a style="cursor:pointer;" (click)="onSelect(event)"><img src="{{ event.imagePath }}" alt="{{ event.name }}"
+                    class="img-thumbnail" style="width: 75px;" /></a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="row">
+        <button class="btn btn-success">Add</button> &nbsp;
+        <button class="btn btn-danger">Delete</button> &nbsp;
+      </div>
+    </div>
+    <div class="col-md-6" style="background-color: lightcyan;">
+      <app-event-detail [currentEvent]="selectedEvent"></app-event-detail>
+      
+    </div>
+</div>
+<!--
+<div class="col-md-5 " style="background-color: limegreen;" >
+  <div class = "row" style="border-right: 1px solid;overflow: scroll;max-height: 400px;">
+      <table class="table" >
+        <thead style="background-color: whitesmoke;">
+            <tr>
+              <th scope="col">S.No</th>
+              <th scope="col">Name</th>
+              <th scope="col">Type</th>
+              <th scope="col">Snapshot</th>
+            </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let event of events;let i=index">
+            <td>{{i+1}}</td>
+            <td>{{event.name}}</td>
+            <td>{{event.type}}</td>
+            <td><a style="cursor:pointer;" (click)="onSelect(event)"><img src="{{ event.imagePath }}" alt="{{ event.name }}" class="img-thumbnail" style="width: 75px;" /></a></td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+ 
+      <a class="list-group-item clearfix" *ngFor=" let event of events" style="cursor:pointer;">
+        <div class="pull-left">
+          <p class="list-group-item-text">{{ event.name }}</p>
+          <p class="list-group-item-text">{{ event.type }}</p>
+        </div>
+        <span class="pull-right">
+          <img src="{{ event.imagePath }}" alt="{{ event.name }}" class="img-thumbnail" style="width: 100px;" />
+        </span>
+      </a>
+    
+</div>
+
+<div class="col-md-7" style="background-color: orange;">
+  <app-event-detail [currentEvent] ="selectedEvent"></app-event-detail>
+    <p>Event Detail Area</p>
+</div>
+<div class="row">
+  <button class="btn btn-success">Add</button> &nbsp;
+  <button class="btn btn-danger">Delete</button> &nbsp;
+</div>
+-->

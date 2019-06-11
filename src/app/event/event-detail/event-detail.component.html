@@ -1,0 +1,22 @@
+<div *ngIf="currentEvent">
+  <img src="{{ currentEvent.imagePath }}" alt="{{ currentEvent.name }}" class="rounded-circle" style="width: 250px;" />
+  <!--<h2>{{currentEvent.name | uppercase}} </h2>
+  <hr>
+  <p>{{currentEvent.details}}</p>-->
+  <table class="table">
+      <tbody>
+        <tr>
+          <td><strong>Event</strong></td>
+          <td>{{currentEvent.name | uppercase}}</td>
+        </tr>
+        <tr>
+          <td><strong>Details</strong></td>
+          <td>{{currentEvent.details}}</td>
+        </tr>
+        <tr>
+          <td><strong>Date</strong></td>
+          <td>{{currentEvent.dateOfEvent}}</td>
+        </tr>
+      </tbody>
+  </table>
+</div>
