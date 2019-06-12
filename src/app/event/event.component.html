@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col-md-6" style="background-color: lightcyan">
+    <div class="col-md-6">
       <div class="row" style="border-right: 1px solid;overflow: scroll;max-height: 400px;">
         <table class="table" style="align-content: right;">
           <thead style="background-color: whitesmoke;">
@@ -23,10 +23,11 @@
       </div>
       <div class="row">
         <button class="btn btn-success">Add</button> &nbsp;
+        <button class="btn btn-info">Edit</button> &nbsp;
         <button class="btn btn-danger">Delete</button> &nbsp;
       </div>
     </div>
-    <div class="col-md-6" style="background-color: lightcyan;">
+    <div class="col-md-6">
       <app-event-detail [currentEvent]="selectedEvent"></app-event-detail>
       
     </div>
