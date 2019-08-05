@@ -1,5 +1,7 @@
 <div *ngIf="currentUser">
-<img src="{{ currentUser.userImage }}" alt="{{ currentUser.name }}" class="rounded-circle" style="width: 250px;" />
+<img src="{{ currentUser.userImage }}" alt="{{ currentUser.name }}" class="rounded-circle" style="width: 250px;" />&nbsp;
+<button class="btn btn-dark" (click)="filePicker.click()" style="font-size: 10px;">Pick Image...</button>
+<input type="file" #filePicker>
 <!--<h2>{{currentEvent.name | uppercase}} </h2>
   <hr>
   <p>{{currentEvent.details}}</p>-->
@@ -20,6 +22,10 @@
     <tr>
       <td><strong>Hobby</strong></td>
       <td>{{currentUser.hobby}}</td>
+    </tr>
+    <tr>
+      <td><button class="btn btn-success">Save</button></td>
+      <td><button class="btn btn-danger">Delete</button></td>
     </tr>
   </tbody>
 </table>

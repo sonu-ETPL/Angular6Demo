@@ -12,4 +12,7 @@ export class EventDetailComponent implements OnInit {
   ngOnInit() {
   }
 
+  onSaveEvent() {
+    
+  }
 }

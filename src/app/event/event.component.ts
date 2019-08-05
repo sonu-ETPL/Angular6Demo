@@ -8,6 +8,11 @@ import { Event } from '../event';
 
 export class EventComponent implements OnInit {
   selectedEvent: Event;
+  enteredEventName = '';
+  enteredEventType = '';
+  enteredEventDetails = '';
+  enteredEventImage = '';
+  enteredEventDate = '';
   events: Event[] = [
     new Event( 'Munshyari Trip', 'Outing', 'Munshyari road trip  Per Person Cost: 1500 INR', 'assets/event.jpg', new Date()),
     new Event('Lunch to BB Nation', 'Lunch', 'BB Nation Lunch Plan 25th Mar 2019', 'assets/lunch.jpg', new Date()),

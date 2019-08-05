@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-6" *ngIf="events.length>0">
       <div class="row" style="border-right: 1px solid;overflow: scroll;max-height: 400px;">
         <table class="table" style="align-content: right;">
           <thead style="background-color: whitesmoke;">
@@ -16,22 +16,24 @@
               <td>{{event.name}}</td>
               <td>{{event.type}}</td>
               <td><a style="cursor:pointer;" (click)="onSelect(event)"><img src="{{ event.imagePath }}" alt="{{ event.name }}"
-                    class="img-thumbnail" style="width: 75px;" /></a></td>
+                    class="img-thumbnail" style="width: 75px;" /></a>
+              </td>
             </tr>
           </tbody>
         </table>
       </div>
+      <div class="row" *ngIf="events.length <= 0">
+        <p>No Events added yet!</p>
+      </div>
       <div class="row">
-        <button class="btn btn-success">Add</button> &nbsp;
-        <button class="btn btn-info">Edit</button> &nbsp;
-        <button class="btn btn-danger">Delete</button> &nbsp;
+        <button class="btn btn-success">New Event</button> &nbsp;
       </div>
     </div>
     <div class="col-md-6">
       <app-event-detail [currentEvent]="selectedEvent"></app-event-detail>
-      
     </div>
 </div>
+
 <!--
 <div class="col-md-5 " style="background-color: limegreen;" >
   <div class = "row" style="border-right: 1px solid;overflow: scroll;max-height: 400px;">
